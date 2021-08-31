@@ -1,0 +1,540 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Shrikhand;
+  src: url(./fonts/Shrikhand-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Black.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(./fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
+* {
+  font-family: "Roboto";
+}
+
+h2 {
+  font-weight: 900;
+}
+
+h3 {
+  font-weight: 900;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/** Division de la page en séctions grace au grid */
+body {
+  max-width: 1440px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /** Header */
+  /** Barre de localisation */
+  /** Intro et Explorer */
+  /** Fonctionnement */
+  /** liste des restaurants */
+  /** Footer */
+}
+
+body .spinnerWrapper {
+  margin: 50px auto 0 auto;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff80;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+body .spinnerOuter,
+body .spinnerMiddle {
+  background-color: transparent;
+  opacity: 1;
+  border-radius: 50px;
+  margin: 0 auto;
+  position: absolute;
+  border: 5px solid #9356dc;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  -webkit-animation: spinout 0.1s;
+}
+
+body .spinnerOuter {
+  width: 50px;
+  height: 50px;
+  -moz-animation: spin 3s linear;
+  -webkit-animation: spin 3s linear;
+}
+
+body .spinnerMiddle {
+  width: 30px;
+  height: 30px;
+  -moz-animation: spinoff 2.5s linear;
+  -webkit-animation: spinoff 2.5s linear;
+  border-color: #ff79da;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinoff {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes spinout {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinout {
+  100% {
+    opacity: 0;
+  }
+}
+
+body .navbar {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  position: relative;
+}
+
+body .navbar .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+body .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e6e6e6;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+}
+
+body .searchbar .search-mapicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .searchbar .searchfield {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background-color: #e6e6e6;
+}
+
+body .searchbar .searchfield::-webkit-input-placeholder {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  border: none;
+  font-weight: bold;
+}
+
+body .searchbar .searchfield:-ms-input-placeholder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  border: none;
+  font-weight: bold;
+}
+
+body .searchbar .searchfield::-ms-input-placeholder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  border: none;
+  font-weight: bold;
+}
+
+body .searchbar .searchfield::placeholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  border: none;
+  font-weight: bold;
+}
+
+body .searchbar .searchfield:focus-visible {
+  outline: none;
+}
+
+body .explorer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  background-color: #f7f7f7;
+  padding: 3rem 2rem;
+}
+
+body .explorer-container .explorer-button {
+  border-radius: 25px;
+  height: 3.2rem;
+  width: 220px;
+  color: white;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-box-shadow: 0 5px 7px 0px #80808033;
+          box-shadow: 0 5px 7px 0px #80808033;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+body .explorer-container .explorer-button:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
+}
+
+body .fonctionnement {
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+body .fonctionnement > h2 {
+  padding: 0 0 0 1rem;
+}
+
+body .fonctionnement .fonctionnement-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 1rem 0rem;
+}
+
+body .fonctionnement .fonctionnement-container .fonctionnement-element {
+  background-color: #f7f7f7;
+  border-radius: 15px;
+  height: 4rem;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  padding-left: 3rem;
+  -webkit-box-shadow: 0px 10px 14px 0px #b8b8b841;
+          box-shadow: 0px 10px 14px 0px #b8b8b841;
+}
+
+body .fonctionnement .fonctionnement-container .fonctionnement-element:hover {
+  background-color: #f9f0ff;
+}
+
+body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-element--title {
+  font-weight: bold;
+}
+
+body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 7vw;
+}
+
+body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-element--icon {
+  color: #929292;
+}
+
+body .fonctionnement .fonctionnement-container .fonctionnement-element:hover > .fonctionnement-element--icon {
+  color: #9356dc;
+}
+
+body .restaurants-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4rem 1rem 5rem 1rem;
+  background-color: #f7f7f7;
+}
+
+body .restaurants-container > h2 {
+  padding: 0 0 1.5rem 1rem;
+}
+
+body .restaurants-container .restaurants-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  row-gap: 1.5rem;
+  padding: 0 0 0 1rem;
+}
+
+body .restaurants-container .restaurants-grid .restaurants-grid--element {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 75% 25%;
+      grid-template-rows: 75% 25%;
+  width: 100%;
+  height: 300px;
+  -webkit-box-shadow: 0 0 16px #0000002e;
+          box-shadow: 0 0 16px #0000002e;
+  border-radius: 1.5rem;
+  background-color: white;
+  color: black;
+}
+
+body .restaurants-container .restaurants-grid .restaurants-grid--element .restaurants-grid--element---image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+body .restaurants-container .restaurants-grid .restaurants-grid--element .new-stick {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  right: 2rem;
+}
+
+body .restaurants-container .restaurants-grid .restaurants-grid--element .restaurants-grid--element---description {
+  padding: 15px 15px 5px 15px;
+}
+
+body .restaurants-heart-icon {
+  position: relative;
+  left: 72vw;
+  bottom: 5vh;
+}
+
+body .restaurants-heart-icon > i {
+  font-size: 2rem;
+  position: absolute;
+  padding: 0.5rem;
+}
+
+body .restaurants-heart-icon .fill {
+  opacity: 0;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body .restaurants-heart-icon .bord {
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body .restaurants-heart-icon:hover > .bord {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body .restaurants-heart-icon:hover > .fill {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+body footer {
+  background: #413d3d;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem;
+}
+
+body footer .logo-footer {
+  height: 17px;
+}
+
+body footer ul {
+  list-style: none;
+}
+
+body footer ul .footer-link {
+  color: white !important;
+}
+
+body footer ul .footer-icon {
+  color: white;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */
