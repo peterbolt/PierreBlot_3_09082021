@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ohmyfood</title>
     <link href="./main.css" rel="stylesheet" />
     <script
@@ -12,24 +12,21 @@
     ></script>
   </head>
   <body>
-    <div class="bloc">
-      <div class="spinnerWrapper">
-        <div class="spinnerOuter"></div>
-        <div class="spinnerMiddle"></div>
-      </div>
-    </div>
+    <!-- <div class="spinnerWrapper">
+      <div class="spinnerOuter"></div>
+      <div class="spinnerMiddle"></div>
+    </div> -->
 
-    <div class="bloc">
-      <header>
-        <nav class="navbar">
-          <div class="header-logo">
-            <img src="./images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" />
-          </div>
-        </nav>
-      </header>
-    </div>
-    <!-- Section localisation -->
-    <div class="bloc">
+    <header>
+      <nav class="navbar">
+        <div class="header-logo">
+          <img src="./images/logo/ohmyfood@2x.svg" alt="logo Ohmyfood" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section localisation -->
       <section class="localisation">
         <div class="searchbar">
           <div class="search-mapicon">
@@ -42,9 +39,8 @@
           />
         </div>
       </section>
-    </div>
-    <!-- Section Explorer les restaurants -->
-    <div class="bloc">
+      <!-- Section Explorer les restaurants -->
+
       <section>
         <div class="explorer-container">
           <h2>Réservez le menu qui vous convient</h2>
@@ -56,10 +52,8 @@
           </div>
         </div>
       </section>
-    </div>
 
-    <!-- Section Fonctionnement -->
-    <div class="bloc">
+      <!-- Section Fonctionnement -->
       <section class="fonctionnement">
         <h2>Fonctionnement</h2>
         <div class="fonctionnement-container">
@@ -92,10 +86,8 @@
           </div>
         </div>
       </section>
-    </div>
 
-    <!-- Section Restaurants -->
-    <div class="bloc">
+      <!-- Section Restaurants -->
       <section>
         <div class="restaurants-container">
           <h2>Restaurants</h2>
@@ -180,32 +172,30 @@
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
-    <div class="bloc">
-      <footer>
-        <div>
-          <img
-            class="logo-footer"
-            src="./images/logo/ohmyfood@2x-white.svg"
-            alt="logo footer"
-          />
-        </div>
-        <ul>
-          <li>
-            <i class="fas fa-utensils footer-icon"></i
-            ><a class="footer-link" href="#">Proposer un restaurant</a>
-          </li>
-          <li>
-            <i class="fas fa-hands-helping footer-icon"></i
-            ><a class="footer-link" href="#">Devenir partenaire</a>
-          </li>
-          <li><a class="footer-link" href="#">Mentions légales</a></li>
-          <li>
-            <a class="footer-link" href="mailto:noreply@ohmyfood.de">Contact</a>
-          </li>
-        </ul>
-      </footer>
-    </div>
+    <footer>
+      <div>
+        <img
+          class="logo-footer"
+          src="./images/logo/ohmyfood@2x-white.svg"
+          alt="logo footer"
+        />
+      </div>
+      <ul>
+        <li>
+          <i class="fas fa-utensils footer-icon"></i
+          ><a class="footer-link" href="#">Proposer un restaurant</a>
+        </li>
+        <li>
+          <i class="fas fa-hands-helping footer-icon"></i
+          ><a class="footer-link" href="#">Devenir partenaire</a>
+        </li>
+        <li><a class="footer-link" href="#">Mentions légales</a></li>
+        <li>
+          <a class="footer-link" href="mailto:noreply@ohmyfood.de">Contact</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
