@@ -9,6 +9,7 @@
 
 .menu_img {
   max-height: 32rem;
+  height: 21rem;
   width: 100%;
   object-fit: cover;
 }
@@ -18,7 +19,6 @@
   margin: auto;
   background-color: #f6f6f6;
   margin-top: -4rem;
-  z-index: 2;
   position: relative;
   padding: 2rem 1rem;
   border-radius: 4rem 4rem 0 0;
@@ -126,6 +126,174 @@
             border-radius: 50%;
             background: white;
             transition-duration: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.m1 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0s 1;
+}
+.p1 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.1s 1;
+}
+.p2 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.2s 1;
+}
+.p3 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.3s 1;
+}
+.m2 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.4s 1;
+}
+.p4 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.5s 1;
+}
+.p5 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.6s 1;
+}
+.p6 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.7s 1;
+}
+.m3 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.8s 1;
+}
+.p7 {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.9s 1;
+}
+.p8 {
+  animation: fadeInUp 1.5s backwards ease-in-out 1s 1;
+}
+.p9 {
+  animation: fadeInUp 1.5s backwards ease-in-out 1.1s 1;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    .restaurant {
+      // overflow: hidden;
+      .gridMenu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        row-gap: 1rem;
+        padding: 1rem 0 0 0;
+        .menu__entrees,
+        .menu__plats,
+        .menu__desserts {
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          max-width: 100%;
+          width: 100%;
+          gap: 1em;
+          padding: 1em;
+          overflow: hidden;
+          h3 {
+            font-weight: 400;
+            border-bottom: 3px solid $color-tertiary;
+            width: 3rem;
+            padding-bottom: 0.3rem;
+          }
+          .menu__platItem {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 1rem;
+            display: flex;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: white;
+            cursor: pointer;
+            height: 5rem;
+            &:hover .menu__platItem__select {
+              margin-right: 0;
+              transition-duration: 0.5s;
+              transition-timing-function: ease;
+            }
+            &:hover i {
+              transform: rotate(360deg);
+              transition-duration: 0.5s;
+            }
+            .menu__platItem__desc {
+              width: 100%;
+              display: flex;
+              max-width: 100%;
+              overflow: hidden;
+              .menu__platItem__descText {
+                width: 100%;
+                margin-left: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: space-evenly;
+                max-width: 100%;
+                overflow: hidden;
+                > * {
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  max-width: 100%;
+                }
+              }
+              .menu__platItem__descPrix {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                max-width: 100%;
+              }
+            }
+            .menu__platItem__select {
+              width: 7rem;
+              background: #99e2d0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: -7rem;
+              transition-duration: 0.5s;
+              transition-timing-function: ease;
+              > i {
+                color: #99e2d0;
+                padding: 0.5rem;
+                border-radius: 50%;
+                background: white;
+                transition-duration: 0.5s;
+              }
+            }
           }
         }
       }

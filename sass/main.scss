@@ -69,16 +69,17 @@ body {
 
   .spinnerWrapper {
     margin: 50px auto 0 auto;
-    z-index: 3;
-    position: fixed;
+    position: absolute;
+    z-index: 10;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff80;
+    animation: spinout 0.1s;
     animation-delay: 2.9s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
   }
   .spinnerOuter,
   .spinnerMiddle {
@@ -90,7 +91,6 @@ body {
     border: 5px solid $color-primary;
     border-top: 5px solid transparent;
     border-left: 5px solid transparent;
-    -webkit-animation: spinout 0.1s;
   }
 
   .spinnerOuter {
@@ -116,7 +116,6 @@ body {
     }
     100% {
       -moz-transform: rotate(360deg);
-      opacity: 0;
     }
   }
 
@@ -150,6 +149,7 @@ body {
   @keyframes spinout {
     100% {
       opacity: 0;
+      z-index: -1;
     }
   }
 
@@ -278,8 +278,9 @@ body {
           border-radius: 50%;
           width: 25px;
           height: 25px;
-          position: absolute;
-          left: 7vw;
+          position: relative;
+          float: left;
+          left: -60px;
         }
         .fonctionnement-element--icon {
           color: rgb(146, 146, 146);
@@ -331,8 +332,9 @@ body {
           padding: 0.5rem;
           border-radius: 0.125rem;
           position: relative;
-          top: 1rem;
-          left: 1rem;
+          float: right;
+          right: 15px;
+          bottom: 215px;
         }
         .restaurants-grid--element---description {
           padding: 15px 15px 5px 15px;
@@ -343,8 +345,9 @@ body {
 
   .restaurants-heart-icon {
     position: relative;
-    left: 72vw;
-    bottom: 5vh;
+    float: right;
+    right: 50px;
+    bottom: 50px;
     > i {
       font-size: 2rem;
       position: absolute;
@@ -404,6 +407,120 @@ body {
         color: white;
         width: 1.2rem;
         margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    display: grid;
+    grid-template-columns: 99vw;
+    align-items: center;
+    margin-right: 2rem;
+
+    /** Fonctionnement */
+    .fonctionnement {
+      padding: 3rem 1rem 3rem 1rem;
+      > h2 {
+        padding: 0 0 0 1rem;
+      }
+      .fonctionnement-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        padding: 1rem 2rem;
+        .fonctionnement-element {
+          background-color: #f7f7f7;
+          border-radius: 15px;
+          height: 4rem;
+          width: 80vw;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 2rem;
+          padding-left: 0rem;
+          box-shadow: 0px 10px 14px 0px #b8b8b841;
+          &:hover {
+            background-color: #f9f0ff;
+          }
+          .fonctionnement-element--title {
+            font-weight: bold;
+          }
+          .fonctionnement-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-primary;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            position: relative;
+            float: left;
+            left: -14px;
+          }
+          .fonctionnement-element--icon {
+            color: rgb(146, 146, 146);
+          }
+          &:hover > .fonctionnement-element--icon {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    /** liste des restaurants */
+    .restaurants-container {
+      display: flex;
+      flex-direction: column;
+
+      padding: 4rem 1rem 5rem 1rem;
+      background-color: #f7f7f7;
+      > h2 {
+        padding: 0 0 1.5rem 1rem;
+      }
+      .restaurants-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-content: center;
+        gap: 1.5rem;
+        padding: 0 0 0 1rem;
+
+        .restaurants-grid--element {
+          display: grid;
+          grid-template-rows: 75% 25%;
+          width: 100%;
+          height: 300px;
+          box-shadow: 0 0 16px #0000002e;
+          border-radius: 1.5rem;
+          background-color: white;
+          color: black;
+          .restaurants-grid--element---image {
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+          }
+          .new-stick {
+            background-color: #99e2d0;
+            color: #1b6150;
+            padding: 0.5rem;
+            border-radius: 0.125rem;
+            position: relative;
+            float: right;
+            right: 15px;
+            bottom: 215px;
+          }
+          .restaurants-grid--element---description {
+            padding: 15px 15px 5px 15px;
+          }
+        }
       }
     }
   }
