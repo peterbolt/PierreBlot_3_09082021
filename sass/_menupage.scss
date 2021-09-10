@@ -145,6 +145,9 @@
 .p3 {
   animation: fadeInUp 1.5s backwards ease-in-out 0.3s 1;
 }
+.p3b {
+  animation: fadeInUp 1.5s backwards ease-in-out 0.35s 1;
+}
 .m2 {
   animation: fadeInUp 1.5s backwards ease-in-out 0.4s 1;
 }
@@ -206,6 +209,7 @@
 @media (min-width: 900px) {
   body {
     .restaurant {
+      width: 99vw;
       // overflow: hidden;
       .gridMenu {
         display: grid;
@@ -254,7 +258,7 @@
               max-width: 100%;
               overflow: hidden;
               .menu__platItem__descText {
-                width: 100%;
+                width: 80%;
                 margin-left: 1rem;
                 display: flex;
                 flex-wrap: wrap;
