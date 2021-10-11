@@ -10,8 +10,7 @@
   max-height: 32rem;
   height: 21rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .restaurant {
@@ -26,12 +25,9 @@
 
 .restaurant .menu__titre {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1rem;
 }
 
@@ -44,23 +40,15 @@
   position: relative;
   left: 0vw !important;
   bottom: 0vh !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-right: 1.5rem;
 }
 
 .restaurant .gridMenu {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   row-gap: 1rem;
   padding: 1rem 0 0 0;
 }
@@ -68,15 +56,9 @@
 .restaurant .gridMenu .menu__entrees,
 .restaurant .gridMenu .menu__plats,
 .restaurant .gridMenu .menu__desserts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: column;
+  align-content: center;
   max-width: 100%;
   width: 100%;
   gap: 1em;
@@ -96,11 +78,8 @@
 .restaurant .gridMenu .menu__entrees .menu__platItem,
 .restaurant .gridMenu .menu__plats .menu__platItem,
 .restaurant .gridMenu .menu__desserts .menu__platItem {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   max-width: 100%;
@@ -109,73 +88,116 @@
   height: 4rem;
 }
 
-.restaurant .gridMenu .menu__entrees .menu__platItem:hover .menu__platItem__select,
-.restaurant .gridMenu .menu__plats .menu__platItem:hover .menu__platItem__select,
-.restaurant .gridMenu .menu__desserts .menu__platItem:hover .menu__platItem__select {
+.restaurant
+  .gridMenu
+  .menu__entrees
+  .menu__platItem:hover
+  .menu__platItem__select,
+.restaurant
+  .gridMenu
+  .menu__plats
+  .menu__platItem:hover
+  .menu__platItem__select,
+.restaurant
+  .gridMenu
+  .menu__desserts
+  .menu__platItem:hover
+  .menu__platItem__select {
   margin-right: 0;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
 
 .restaurant .gridMenu .menu__entrees .menu__platItem:hover i,
 .restaurant .gridMenu .menu__plats .menu__platItem:hover i,
 .restaurant .gridMenu .menu__desserts .menu__platItem:hover i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
 }
 
 .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc,
 .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc,
 .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 100%;
   overflow: hidden;
 }
 
-.restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc .menu__platItem__descText,
-.restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc .menu__platItem__descText,
-.restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc .menu__platItem__descText {
+.restaurant
+  .gridMenu
+  .menu__entrees
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descText,
+.restaurant
+  .gridMenu
+  .menu__plats
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descText,
+.restaurant
+  .gridMenu
+  .menu__desserts
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descText {
   width: 100%;
   margin-left: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-evenly;
   max-width: 100%;
   overflow: hidden;
 }
 
-.restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc .menu__platItem__descText > *,
-.restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc .menu__platItem__descText > *,
-.restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc .menu__platItem__descText > * {
+.restaurant
+  .gridMenu
+  .menu__entrees
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descText
+  > *,
+.restaurant
+  .gridMenu
+  .menu__plats
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descText
+  > *,
+.restaurant
+  .gridMenu
+  .menu__desserts
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descText
+  > * {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 100%;
 }
 
-.restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc .menu__platItem__descPrix,
-.restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc .menu__platItem__descPrix,
-.restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc .menu__platItem__descPrix {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.restaurant
+  .gridMenu
+  .menu__entrees
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descPrix,
+.restaurant
+  .gridMenu
+  .menu__plats
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descPrix,
+.restaurant
+  .gridMenu
+  .menu__desserts
+  .menu__platItem
+  .menu__platItem__desc
+  .menu__platItem__descPrix {
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   margin-bottom: 1rem;
   margin-right: 1rem;
   max-width: 100%;
@@ -186,116 +208,99 @@
 .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__select {
   width: 7rem;
   background: #99e2d0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-right: -7rem;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
 
-.restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__select > i,
+.restaurant
+  .gridMenu
+  .menu__entrees
+  .menu__platItem
+  .menu__platItem__select
+  > i,
 .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__select > i,
-.restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__select > i {
+.restaurant
+  .gridMenu
+  .menu__desserts
+  .menu__platItem
+  .menu__platItem__select
+  > i {
   color: #99e2d0;
   padding: 0.5rem;
   border-radius: 50%;
   background: white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .m1 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0s 1;
 }
 
 .p1 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.1s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.1s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.1s 1;
 }
 
 .p2 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.2s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.2s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.2s 1;
 }
 
 .p3 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.3s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.3s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.3s 1;
 }
 
 .p3b {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.35s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.35s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.35s 1;
 }
 
 .m2 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.4s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.4s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.4s 1;
 }
 
 .p4 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.5s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.5s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.5s 1;
 }
 
 .p5 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.6s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.6s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.6s 1;
 }
 
 .p6 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.7s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.7s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.7s 1;
 }
 
 .m3 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.8s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.8s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.8s 1;
 }
 
 .p7 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 0.9s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 0.9s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 0.9s 1;
 }
 
 .p8 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 1s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 1s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 1s 1;
 }
 
 .p9 {
-  -webkit-animation: fadeInUp 1.5s backwards ease-in-out 1.1s 1;
-          animation: fadeInUp 1.5s backwards ease-in-out 1.1s 1;
+  animation: fadeInUp 1.5s backwards ease-in-out 1.1s 1;
 }
 
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 25%, 0);
     transform: translate3d(0, 25%, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -303,12 +308,10 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 25%, 0);
     transform: translate3d(0, 25%, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -318,27 +321,18 @@
     width: 99vw;
   }
   body .restaurant .gridMenu {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     row-gap: 1rem;
     padding: 1rem 0 0 0;
   }
   body .restaurant .gridMenu .menu__entrees,
   body .restaurant .gridMenu .menu__plats,
   body .restaurant .gridMenu .menu__desserts {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-direction: column;
+    align-content: center;
     max-width: 100%;
     width: 100%;
     gap: 1em;
@@ -356,11 +350,8 @@
   body .restaurant .gridMenu .menu__entrees .menu__platItem,
   body .restaurant .gridMenu .menu__plats .menu__platItem,
   body .restaurant .gridMenu .menu__desserts .menu__platItem {
-    -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
     max-width: 100%;
@@ -368,111 +359,198 @@
     cursor: pointer;
     height: 5rem;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem:hover .menu__platItem__select,
-  body .restaurant .gridMenu .menu__plats .menu__platItem:hover .menu__platItem__select,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem:hover .menu__platItem__select {
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem:hover
+    .menu__platItem__select,
+  body
+    .restaurant
+    .gridMenu
+    .menu__plats
+    .menu__platItem:hover
+    .menu__platItem__select,
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem:hover
+    .menu__platItem__select {
     margin-right: 0;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
   }
   body .restaurant .gridMenu .menu__entrees .menu__platItem:hover i,
   body .restaurant .gridMenu .menu__plats .menu__platItem:hover i,
   body .restaurant .gridMenu .menu__desserts .menu__platItem:hover i {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc,
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem
+    .menu__platItem__desc,
   body .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc {
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem
+    .menu__platItem__desc {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     max-width: 100%;
     overflow: hidden;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc .menu__platItem__descText,
-  body .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc .menu__platItem__descText,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc .menu__platItem__descText {
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descText,
+  body
+    .restaurant
+    .gridMenu
+    .menu__plats
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descText,
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descText {
     width: 80%;
     margin-left: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
     max-width: 100%;
     overflow: hidden;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc .menu__platItem__descText > *,
-  body .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc .menu__platItem__descText > *,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc .menu__platItem__descText > * {
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descText
+    > *,
+  body
+    .restaurant
+    .gridMenu
+    .menu__plats
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descText
+    > *,
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descText
+    > * {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 100%;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__desc .menu__platItem__descPrix,
-  body .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__desc .menu__platItem__descPrix,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__desc .menu__platItem__descPrix {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descPrix,
+  body
+    .restaurant
+    .gridMenu
+    .menu__plats
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descPrix,
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem
+    .menu__platItem__desc
+    .menu__platItem__descPrix {
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
     margin-bottom: 1rem;
     margin-right: 1rem;
     max-width: 100%;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__select,
-  body .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__select,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__select {
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem
+    .menu__platItem__select,
+  body
+    .restaurant
+    .gridMenu
+    .menu__plats
+    .menu__platItem
+    .menu__platItem__select,
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem
+    .menu__platItem__select {
     width: 7rem;
     background: #99e2d0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     margin-right: -7rem;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
   }
-  body .restaurant .gridMenu .menu__entrees .menu__platItem .menu__platItem__select > i,
-  body .restaurant .gridMenu .menu__plats .menu__platItem .menu__platItem__select > i,
-  body .restaurant .gridMenu .menu__desserts .menu__platItem .menu__platItem__select > i {
+  body
+    .restaurant
+    .gridMenu
+    .menu__entrees
+    .menu__platItem
+    .menu__platItem__select
+    > i,
+  body
+    .restaurant
+    .gridMenu
+    .menu__plats
+    .menu__platItem
+    .menu__platItem__select
+    > i,
+  body
+    .restaurant
+    .gridMenu
+    .menu__desserts
+    .menu__platItem
+    .menu__platItem__select
+    > i {
     color: #99e2d0;
     padding: 0.5rem;
     border-radius: 50%;
     background: white;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    transition-duration: 0.5s;
   }
 }
 
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -548,19 +626,12 @@ body .spinnerWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff80;
-  -webkit-animation: spinout 0.1s;
-          animation: spinout 0.1s;
-  -webkit-animation-delay: 2.9s;
-          animation-delay: 2.9s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation: spinout 0.1s;
+  animation-delay: 2.9s;
+  animation-fill-mode: both;
 }
 
 body .spinnerOuter,
@@ -579,14 +650,12 @@ body .spinnerOuter {
   width: 50px;
   height: 50px;
   -moz-animation: spin 3s linear;
-  -webkit-animation: spin 3s linear;
 }
 
 body .spinnerMiddle {
   width: 30px;
   height: 30px;
   -moz-animation: spinoff 2.5s linear;
-  -webkit-animation: spinoff 2.5s linear;
   border-color: #ff79da;
   border-top: 5px solid transparent;
   border-left: 5px solid transparent;
@@ -628,32 +697,21 @@ body .navbar {
   background-color: white;
   height: 80px;
   width: 100%;
-  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   z-index: 10;
   position: relative;
 }
 
 body .navbar .header-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
 body .searchbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   background-color: #e6e6e6;
   height: 60px;
   width: 100%;
@@ -661,36 +719,23 @@ body .searchbar {
 }
 
 body .searchbar .search-mapicon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 body .searchbar .searchfield {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   border: none;
   background-color: #e6e6e6;
 }
 
 body .searchbar .searchfield::-webkit-input-placeholder {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   color: black;
@@ -699,12 +744,9 @@ body .searchbar .searchfield::-webkit-input-placeholder {
 }
 
 body .searchbar .searchfield:-ms-input-placeholder {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   color: black;
@@ -713,12 +755,9 @@ body .searchbar .searchfield:-ms-input-placeholder {
 }
 
 body .searchbar .searchfield::-ms-input-placeholder {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   color: black;
@@ -727,15 +766,9 @@ body .searchbar .searchfield::-ms-input-placeholder {
 }
 
 body .searchbar .searchfield::placeholder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   font-weight: 400;
   color: black;
@@ -748,20 +781,11 @@ body .searchbar .searchfield:focus-visible {
 }
 
 body .explorer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   background-color: #f7f7f7;
   padding: 3rem 2rem;
@@ -774,16 +798,27 @@ body .explorer-container .explorer-button {
   color: white;
   cursor: pointer;
   border: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ff79da),
+    to(#9356dc)
+  );
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  -webkit-box-shadow: 0 5px 7px 0px #80808033;
-          box-shadow: 0 5px 7px 0px #80808033;
+  box-shadow: 0 5px 7px 0px #80808033;
   font-weight: 500;
   font-size: 1em;
 }
 
 body .explorer-container .explorer-button:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#ff79da),
+    to(#9356dc)
+  );
   background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
 }
 
@@ -796,16 +831,9 @@ body .fonctionnement > h2 {
 }
 
 body .fonctionnement .fonctionnement-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding: 1rem 0rem;
 }
@@ -818,36 +846,33 @@ body .fonctionnement .fonctionnement-container .fonctionnement-element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   gap: 2rem;
   padding-left: 3rem;
-  -webkit-box-shadow: 0px 10px 14px 0px #b8b8b841;
-          box-shadow: 0px 10px 14px 0px #b8b8b841;
+  box-shadow: 0px 10px 14px 0px #b8b8b841;
 }
 
 body .fonctionnement .fonctionnement-container .fonctionnement-element:hover {
   background-color: #f9f0ff;
 }
 
-body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-element--title {
+body
+  .fonctionnement
+  .fonctionnement-container
+  .fonctionnement-element
+  .fonctionnement-element--title {
   font-weight: bold;
 }
 
-body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body
+  .fonctionnement
+  .fonctionnement-container
+  .fonctionnement-element
+  .fonctionnement-number {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   background-color: #9356dc;
   color: white;
   border-radius: 50%;
@@ -858,22 +883,25 @@ body .fonctionnement .fonctionnement-container .fonctionnement-element .fonction
   left: -60px;
 }
 
-body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-element--icon {
+body
+  .fonctionnement
+  .fonctionnement-container
+  .fonctionnement-element
+  .fonctionnement-element--icon {
   color: #929292;
 }
 
-body .fonctionnement .fonctionnement-container .fonctionnement-element:hover > .fonctionnement-element--icon {
+body
+  .fonctionnement
+  .fonctionnement-container
+  .fonctionnement-element:hover
+  > .fonctionnement-element--icon {
   color: #9356dc;
 }
 
 body .restaurants-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 4rem 1rem 5rem 1rem;
   background-color: #f7f7f7;
 }
@@ -886,12 +914,8 @@ body .restaurants-container .restaurants-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: column;
+  align-content: center;
   row-gap: 1.5rem;
   padding: 0 0 0 1rem;
 }
@@ -899,22 +923,22 @@ body .restaurants-container .restaurants-grid {
 body .restaurants-container .restaurants-grid .restaurants-grid--element {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 75% 25%;
-      grid-template-rows: 75% 25%;
+  grid-template-rows: 75% 25%;
   width: 100%;
   height: 300px;
-  -webkit-box-shadow: 0 0 16px #0000002e;
-          box-shadow: 0 0 16px #0000002e;
+  box-shadow: 0 0 16px #0000002e;
   border-radius: 1.5rem;
   background-color: white;
   color: black;
 }
 
-body .restaurants-container .restaurants-grid .restaurants-grid--element .restaurants-grid--element---image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+body
+  .restaurants-container
+  .restaurants-grid
+  .restaurants-grid--element
+  .restaurants-grid--element---image {
+  object-fit: cover;
+  object-position: center;
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -923,7 +947,11 @@ body .restaurants-container .restaurants-grid .restaurants-grid--element .restau
   border-top-right-radius: 1.5rem;
 }
 
-body .restaurants-container .restaurants-grid .restaurants-grid--element .new-stick {
+body
+  .restaurants-container
+  .restaurants-grid
+  .restaurants-grid--element
+  .new-stick {
   background-color: #99e2d0;
   color: #1b6150;
   padding: 0.5rem;
@@ -934,61 +962,82 @@ body .restaurants-container .restaurants-grid .restaurants-grid--element .new-st
   bottom: 215px;
 }
 
-body .restaurants-container .restaurants-grid .restaurants-grid--element .restaurants-grid--element---description {
+body
+  .restaurants-container
+  .restaurants-grid
+  .restaurants-grid--element
+  .restaurants-grid--element---description {
   padding: 15px 15px 5px 15px;
 }
 
-body .restaurants-heart-icon, body .restaurant .menu__titre .restoLike, .restaurant .menu__titre body .restoLike {
+body .restaurants-heart-icon,
+body .restaurant .menu__titre .restoLike,
+.restaurant .menu__titre body .restoLike {
   position: relative;
   float: right;
   right: 50px;
   bottom: 50px;
 }
 
-body .restaurants-heart-icon > i, body .restaurant .menu__titre .restoLike > i, .restaurant .menu__titre body .restoLike > i {
+body .restaurants-heart-icon > i,
+body .restaurant .menu__titre .restoLike > i,
+.restaurant .menu__titre body .restoLike > i {
   font-size: 2rem;
   position: absolute;
   padding: 0.5rem;
 }
 
-body .restaurants-heart-icon .fill, body .restaurant .menu__titre .restoLike .fill, .restaurant .menu__titre body .restoLike .fill {
+body .restaurants-heart-icon .fill,
+body .restaurant .menu__titre .restoLike .fill,
+.restaurant .menu__titre body .restoLike .fill {
   opacity: 0;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
-body .restaurants-heart-icon .bord, body .restaurant .menu__titre .restoLike .bord, .restaurant .menu__titre body .restoLike .bord {
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+body .restaurants-heart-icon .bord,
+body .restaurant .menu__titre .restoLike .bord,
+.restaurant .menu__titre body .restoLike .bord {
+  transition-duration: 500ms;
 }
 
-body .restaurants-heart-icon:hover > .bord, body .restaurant .menu__titre .restoLike:hover > .bord, .restaurant .menu__titre body .restoLike:hover > .bord {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+body .restaurants-heart-icon:hover > .bord,
+body .restaurant .menu__titre .restoLike:hover > .bord,
+.restaurant .menu__titre body .restoLike:hover > .bord {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9356dc),
+    to(#ff79da)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
-body .restaurants-heart-icon:hover > .fill, body .restaurant .menu__titre .restoLike:hover > .fill, .restaurant .menu__titre body .restoLike:hover > .fill {
+body .restaurants-heart-icon:hover > .fill,
+body .restaurant .menu__titre .restoLike:hover > .fill,
+.restaurant .menu__titre body .restoLike:hover > .fill {
   opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#9356dc),
+    to(#ff79da)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  transition-duration: 500ms;
 }
 
 body footer {
   background: #413d3d;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   row-gap: 1rem;
   padding: 2rem;
 }
@@ -1016,7 +1065,7 @@ body footer ul .footer-icon {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100vw;
-        grid-template-columns: 100vw;
+    grid-template-columns: 100vw;
     max-width: 2560px;
     /** Fonctionnement */
     /** liste des restaurants */
@@ -1028,16 +1077,9 @@ body footer ul .footer-icon {
     padding: 0 0 0 1rem;
   }
   body .fonctionnement .fonctionnement-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
     gap: 3rem;
     padding: 1rem 2rem;
   }
@@ -1046,36 +1088,31 @@ body footer ul .footer-icon {
     border-radius: 15px;
     height: 4rem;
     width: 80vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
     gap: 2rem;
     padding-left: 0rem;
-    -webkit-box-shadow: 0px 10px 14px 0px #b8b8b841;
-            box-shadow: 0px 10px 14px 0px #b8b8b841;
+    box-shadow: 0px 10px 14px 0px #b8b8b841;
   }
   body .fonctionnement .fonctionnement-container .fonctionnement-element:hover {
     background-color: #f9f0ff;
   }
-  body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-element--title {
+  body
+    .fonctionnement
+    .fonctionnement-container
+    .fonctionnement-element
+    .fonctionnement-element--title {
     font-weight: bold;
   }
-  body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-number {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  body
+    .fonctionnement
+    .fonctionnement-container
+    .fonctionnement-element
+    .fonctionnement-number {
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     background-color: #9356dc;
     color: white;
     border-radius: 50%;
@@ -1085,20 +1122,23 @@ body footer ul .footer-icon {
     float: left;
     left: -14px;
   }
-  body .fonctionnement .fonctionnement-container .fonctionnement-element .fonctionnement-element--icon {
+  body
+    .fonctionnement
+    .fonctionnement-container
+    .fonctionnement-element
+    .fonctionnement-element--icon {
     color: #929292;
   }
-  body .fonctionnement .fonctionnement-container .fonctionnement-element:hover > .fonctionnement-element--icon {
+  body
+    .fonctionnement
+    .fonctionnement-container
+    .fonctionnement-element:hover
+    > .fonctionnement-element--icon {
     color: #9356dc;
   }
   body .restaurants-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 4rem 1rem 5rem 1rem;
     background-color: #f7f7f7;
   }
@@ -1106,35 +1146,30 @@ body footer ul .footer-icon {
     padding: 0 0 1.5rem 1rem;
   }
   body .restaurants-container .restaurants-grid {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
     gap: 1.5rem;
     padding: 0 0 0 1rem;
   }
   body .restaurants-container .restaurants-grid .restaurants-grid--element {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 75% 25%;
-        grid-template-rows: 75% 25%;
+    grid-template-rows: 75% 25%;
     width: 100%;
     height: 300px;
-    -webkit-box-shadow: 0 0 16px #0000002e;
-            box-shadow: 0 0 16px #0000002e;
+    box-shadow: 0 0 16px #0000002e;
     border-radius: 1.5rem;
     background-color: white;
     color: black;
   }
-  body .restaurants-container .restaurants-grid .restaurants-grid--element .restaurants-grid--element---image {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+  body
+    .restaurants-container
+    .restaurants-grid
+    .restaurants-grid--element
+    .restaurants-grid--element---image {
+    object-fit: cover;
+    object-position: center;
     height: 100%;
     width: 100%;
     max-width: 100%;
@@ -1142,7 +1177,11 @@ body footer ul .footer-icon {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
   }
-  body .restaurants-container .restaurants-grid .restaurants-grid--element .new-stick {
+  body
+    .restaurants-container
+    .restaurants-grid
+    .restaurants-grid--element
+    .new-stick {
     background-color: #99e2d0;
     color: #1b6150;
     padding: 0.5rem;
@@ -1152,7 +1191,11 @@ body footer ul .footer-icon {
     right: 15px;
     bottom: 215px;
   }
-  body .restaurants-container .restaurants-grid .restaurants-grid--element .restaurants-grid--element---description {
+  body
+    .restaurants-container
+    .restaurants-grid
+    .restaurants-grid--element
+    .restaurants-grid--element---description {
     padding: 15px 15px 5px 15px;
   }
 }
